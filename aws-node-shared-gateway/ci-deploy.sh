@@ -1,21 +1,21 @@
 #!/bin/bash
 
-cd gateway
+cd gateway || exit
 serverless deploy
 sleep 5s
 
 cd ..
-cd products
+cd products || exit
 serverless deploy
 sleep 5s
 
 cd ..
-cd transactions
+cd transactions || exit
 serverless deploy
 sleep 5s
 
 cd ..
-cd users
+cd users || exit
 serverless deploy
 sleep 5s
 
