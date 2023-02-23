@@ -1,19 +1,19 @@
 #!/bin/bash
 
 echo "Demolishing your awesome stacks..."
-cd products
+cd products || exit
 serverless remove
 
 cd ..
-cd transactions
+cd transactions || exit
 serverless remove
 
 cd ..
-cd users
+cd users || exit
 serverless remove
 
 cd ..
-cd gateway
+cd gateway || exit
 serverless remove
 
 echo "Demolishing complete :)"
